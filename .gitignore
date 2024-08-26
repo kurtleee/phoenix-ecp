@@ -30,3 +30,7 @@ replay_pid*
 # If there are files with these extensions in any subdirectory, ignore them as well
 **/*.yml
 **/*.properties
+
+# Ignore all .idea directories
+.idea/
+
