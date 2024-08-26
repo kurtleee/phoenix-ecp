@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="customer-server" />
+        <module name="product-server" />
+        <module name="billing-server" />
+        <module name="common-server" />
+        <module name="shipping-server" />
+        <module name="order-server" />
+        <module name="flowable-server" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
