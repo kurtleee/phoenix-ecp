@@ -9,6 +9,7 @@
         <module name="customer-server" />
         <module name="product-server" />
         <module name="billing-server" />
+        <module name="gateway-server" />
         <module name="common-server" />
         <module name="shipping-server" />
         <module name="order-server" />
