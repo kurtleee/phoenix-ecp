@@ -16,6 +16,7 @@
         <module>product-server</module>
         <module>billing-server</module>
         <module>shipping-server</module>
+        <module>gateway-server</module>
     </modules>
 
     <properties>
