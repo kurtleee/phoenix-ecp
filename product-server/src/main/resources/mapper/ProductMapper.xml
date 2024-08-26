@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uniview.product.mapper.ProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.uniview.product.pojo.Product">
+            <id property="productId" column="product_id" jdbcType="BIGINT"/>
+            <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+            <result property="productCode" column="product_code" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="sku" column="sku" jdbcType="VARCHAR"/>
+            <result property="category" column="category" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        product_id,product_name,product_code,
+        description,price,sku,
+        category,created_at,updated_at
+    </sql>
+</mapper>

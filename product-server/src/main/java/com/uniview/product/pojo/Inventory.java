@@ -5,27 +5,21 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 import lombok.Data;
 
 /**
- * 订单项表
- * @TableName order_item
+ * 库存表
+ * @TableName inventory
  */
-@TableName(value ="order_item")
+@TableName(value ="inventory")
 @Data
-public class OrderItem implements Serializable {
+public class Inventory implements Serializable {
     /**
-     * 订单项ID
+     * 库存ID
      */
     @TableId(type = IdType.AUTO)
-    private Long orderItemId;
-
-    /**
-     * 关联的订单ID
-     */
-    private Long orderId;
+    private Long inventoryId;
 
     /**
      * 关联的产品ID
@@ -33,37 +27,32 @@ public class OrderItem implements Serializable {
     private Long productId;
 
     /**
-     * 产品数量
+     * 库存位置
+     */
+    private String location;
+
+    /**
+     * 库存数量
      */
     private Integer quantity;
 
     /**
-     * 产品单价
+     * 批次号
      */
-    private BigDecimal unitPrice;
+    private String batchNumber;
 
     /**
-     * 订单项总价
+     * 到期日期
      */
-    private BigDecimal totalPrice;
+    private Date expirationDate;
 
     /**
-     * 折扣率
-     */
-    private BigDecimal discount;
-
-    /**
-     * 税率
-     */
-    private BigDecimal taxRate;
-
-    /**
-     * 订单项创建时间
+     * 库存记录创建时间
      */
     private Date createdAt;
 
     /**
-     * 订单项更新时间
+     * 库存记录更新时间
      */
     private Date updatedAt;
 
@@ -81,15 +70,13 @@ public class OrderItem implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        OrderItem other = (OrderItem) that;
-        return (this.getOrderItemId() == null ? other.getOrderItemId() == null : this.getOrderItemId().equals(other.getOrderItemId()))
-            && (this.getOrderId() == null ? other.getOrderId() == null : this.getOrderId().equals(other.getOrderId()))
+        Inventory other = (Inventory) that;
+        return (this.getInventoryId() == null ? other.getInventoryId() == null : this.getInventoryId().equals(other.getInventoryId()))
             && (this.getProductId() == null ? other.getProductId() == null : this.getProductId().equals(other.getProductId()))
+            && (this.getLocation() == null ? other.getLocation() == null : this.getLocation().equals(other.getLocation()))
             && (this.getQuantity() == null ? other.getQuantity() == null : this.getQuantity().equals(other.getQuantity()))
-            && (this.getUnitPrice() == null ? other.getUnitPrice() == null : this.getUnitPrice().equals(other.getUnitPrice()))
-            && (this.getTotalPrice() == null ? other.getTotalPrice() == null : this.getTotalPrice().equals(other.getTotalPrice()))
-            && (this.getDiscount() == null ? other.getDiscount() == null : this.getDiscount().equals(other.getDiscount()))
-            && (this.getTaxRate() == null ? other.getTaxRate() == null : this.getTaxRate().equals(other.getTaxRate()))
+            && (this.getBatchNumber() == null ? other.getBatchNumber() == null : this.getBatchNumber().equals(other.getBatchNumber()))
+            && (this.getExpirationDate() == null ? other.getExpirationDate() == null : this.getExpirationDate().equals(other.getExpirationDate()))
             && (this.getCreatedAt() == null ? other.getCreatedAt() == null : this.getCreatedAt().equals(other.getCreatedAt()))
             && (this.getUpdatedAt() == null ? other.getUpdatedAt() == null : this.getUpdatedAt().equals(other.getUpdatedAt()));
     }
@@ -98,14 +85,12 @@ public class OrderItem implements Serializable {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((getOrderItemId() == null) ? 0 : getOrderItemId().hashCode());
-        result = prime * result + ((getOrderId() == null) ? 0 : getOrderId().hashCode());
+        result = prime * result + ((getInventoryId() == null) ? 0 : getInventoryId().hashCode());
         result = prime * result + ((getProductId() == null) ? 0 : getProductId().hashCode());
+        result = prime * result + ((getLocation() == null) ? 0 : getLocation().hashCode());
         result = prime * result + ((getQuantity() == null) ? 0 : getQuantity().hashCode());
-        result = prime * result + ((getUnitPrice() == null) ? 0 : getUnitPrice().hashCode());
-        result = prime * result + ((getTotalPrice() == null) ? 0 : getTotalPrice().hashCode());
-        result = prime * result + ((getDiscount() == null) ? 0 : getDiscount().hashCode());
-        result = prime * result + ((getTaxRate() == null) ? 0 : getTaxRate().hashCode());
+        result = prime * result + ((getBatchNumber() == null) ? 0 : getBatchNumber().hashCode());
+        result = prime * result + ((getExpirationDate() == null) ? 0 : getExpirationDate().hashCode());
         result = prime * result + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         result = prime * result + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return result;
@@ -117,14 +102,12 @@ public class OrderItem implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", orderItemId=").append(orderItemId);
-        sb.append(", orderId=").append(orderId);
+        sb.append(", inventoryId=").append(inventoryId);
         sb.append(", productId=").append(productId);
+        sb.append(", location=").append(location);
         sb.append(", quantity=").append(quantity);
-        sb.append(", unitPrice=").append(unitPrice);
-        sb.append(", totalPrice=").append(totalPrice);
-        sb.append(", discount=").append(discount);
-        sb.append(", taxRate=").append(taxRate);
+        sb.append(", batchNumber=").append(batchNumber);
+        sb.append(", expirationDate=").append(expirationDate);
         sb.append(", createdAt=").append(createdAt);
         sb.append(", updatedAt=").append(updatedAt);
         sb.append(", serialVersionUID=").append(serialVersionUID);

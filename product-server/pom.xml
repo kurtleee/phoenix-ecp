@@ -24,6 +24,13 @@
             <artifactId>mybatis-plus</artifactId>
             <version>3.5.1</version>
         </dependency>
+
+        <!--        MySQL 连接依赖，请在配置文件中加入数据库连接信息，否则运行报错-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
     </dependencies>
 
 </project>
