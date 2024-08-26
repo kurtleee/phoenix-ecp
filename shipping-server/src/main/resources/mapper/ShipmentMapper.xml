@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uniview.shipping.mapper.ShipmentMapper">
+
+    <resultMap id="BaseResultMap" type="com.uniview.shipping.pojo.Shipment">
+            <id property="shipmentId" column="shipment_id" jdbcType="BIGINT"/>
+            <result property="orderId" column="order_id" jdbcType="BIGINT"/>
+            <result property="shipmentDate" column="shipment_date" jdbcType="DATE"/>
+            <result property="carrier" column="carrier" jdbcType="VARCHAR"/>
+            <result property="trackingNumber" column="tracking_number" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="VARCHAR"/>
+            <result property="shippingCost" column="shipping_cost" jdbcType="DECIMAL"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        shipment_id,order_id,shipment_date,
+        carrier,tracking_number,status,
+        shipping_cost,created_at,updated_at
+    </sql>
+</mapper>
