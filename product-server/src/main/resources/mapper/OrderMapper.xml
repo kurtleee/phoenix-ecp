@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uniview.product.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.uniview.product.pojo.Order">
+            <id property="orderId" column="order_id" jdbcType="BIGINT"/>
+            <result property="customerId" column="customer_id" jdbcType="BIGINT"/>
+            <result property="orderDate" column="order_date" jdbcType="DATE"/>
+            <result property="deliveryDate" column="delivery_date" jdbcType="DATE"/>
+            <result property="totalAmount" column="total_amount" jdbcType="DECIMAL"/>
+            <result property="paymentMethod" column="payment_method" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="VARCHAR"/>
+            <result property="paymentStatus" column="payment_status" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+            <result property="employeeId" column="employee_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_id,customer_id,order_date,
+        delivery_date,total_amount,payment_method,
+        status,payment_status,created_at,
+        updated_at,employee_id
+    </sql>
+</mapper>
