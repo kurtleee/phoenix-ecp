@@ -2,6 +2,7 @@ package com.uniview.customer.mapper;
 
 import com.uniview.customer.pojo.Department;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
 * @author kurtlee
@@ -9,6 +10,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2024-08-26 17:39:55
 * @Entity com.uniview.customer.pojo.Department
 */
+@Mapper
 public interface DepartmentMapper extends BaseMapper<Department> {
 
 }
