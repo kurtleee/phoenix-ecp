@@ -26,10 +26,12 @@ replay_pid*
 # Ignore all .yml and .properties files
 *.yml
 *.properties
+*.yaml
 
 # If there are files with these extensions in any subdirectory, ignore them as well
 **/*.yml
 **/*.properties
+**/*.yaml
 
 # Ignore all .idea directories
 .idea/
