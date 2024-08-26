@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uniview.customer.mapper.DepartmentMapper">
+
+    <resultMap id="BaseResultMap" type="com.uniview.customer.pojo.Department">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="departmentName" column="department_name" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,department_name,description
+    </sql>
+</mapper>

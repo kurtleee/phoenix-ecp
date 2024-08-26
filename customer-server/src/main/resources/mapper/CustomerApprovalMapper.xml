@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uniview.customer.mapper.CustomerApprovalMapper">
+
+    <resultMap id="BaseResultMap" type="com.uniview.customer.pojo.CustomerApproval">
+            <id property="approvalId" column="approval_id" jdbcType="BIGINT"/>
+            <result property="customerId" column="customer_id" jdbcType="BIGINT"/>
+            <result property="processInstanceId" column="process_instance_id" jdbcType="BIGINT"/>
+            <result property="approvalType" column="approval_type" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="VARCHAR"/>
+            <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        approval_id,customer_id,process_instance_id,
+        approval_type,status,remarks,
+        created_at,updated_at
+    </sql>
+</mapper>
