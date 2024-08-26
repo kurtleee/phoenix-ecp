@@ -22,3 +22,11 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Ignore all .yml and .properties files
+*.yml
+*.properties
+
+# If there are files with these extensions in any subdirectory, ignore them as well
+**/*.yml
+**/*.properties
