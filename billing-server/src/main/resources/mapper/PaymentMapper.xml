@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uniview.billing.mapper.PaymentMapper">
+
+    <resultMap id="BaseResultMap" type="com.uniview.billing.pojo.Payment">
+            <id property="paymentId" column="payment_id" jdbcType="BIGINT"/>
+            <result property="invoiceId" column="invoice_id" jdbcType="BIGINT"/>
+            <result property="paymentDate" column="payment_date" jdbcType="DATE"/>
+            <result property="amount" column="amount" jdbcType="DECIMAL"/>
+            <result property="paymentMethod" column="payment_method" jdbcType="VARCHAR"/>
+            <result property="confirmationNumber" column="confirmation_number" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        payment_id,invoice_id,payment_date,
+        amount,payment_method,confirmation_number,
+        created_at,updated_at
+    </sql>
+</mapper>
