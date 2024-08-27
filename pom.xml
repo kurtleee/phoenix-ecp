@@ -40,6 +40,19 @@
             <scope>provided</scope>
         </dependency>
 
+<!--        加入Swagger以及改良UI-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-ui</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+
 
     </dependencies>
 
